@@ -1,7 +1,7 @@
-import "./App.css";
+import React from "react";
 import { useState } from "react";
 
-function App() {
+function Textbox() {
   const [message, setmessage] = useState("");
   const [response, setresponse] = useState("");
 
@@ -27,10 +27,9 @@ function App() {
         <textarea value={message} onChange={handleChange}></textarea>
         <button type="submit">Submit</button>
       </form>
-
       <div>{response}</div>
     </div>
   );
 }
 
-export default App;
+export default Textbox;
