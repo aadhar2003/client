@@ -1,6 +1,5 @@
 import "./App.css";
-import Choice from "./components/Choice/Choice";
-import Jumbotron from "./components/jumbotron/Jumbotron";
+import Home from "./components/Home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Login from "./components/login_page/Login";
 
@@ -11,12 +10,10 @@ function App() {
     <div>
       <Router>
         <Navbar />
-
-          <Routes>
-            <Route path="/login" element={<Login />}></Route>
-          </Routes>
-          <Jumbotron />
-          <Choice />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
       </Router>
     </div>
   );
