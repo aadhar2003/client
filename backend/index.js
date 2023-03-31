@@ -1,4 +1,4 @@
-require("dotenv").config();
+ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -12,8 +12,9 @@ const port = 3001;
 const OpenAIimport = require("openai");
 const { Configuration, OpenAIApi } = OpenAIimport;
 const configuration = new Configuration({
-  organization: "org-kCA9UZzsovocEt3gzbVvaTHJ",
+  organization: "org-k2OyhHx9Va4OUTbSwhYY2FMz",
   apiKey: process.env.API_KEY,
+  // apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
