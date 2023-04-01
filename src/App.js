@@ -1,15 +1,22 @@
+import "./App.css";
+import Home from "./components/Home/Home";
+import Navbar from "./components/navbar/Navbar";
+import Login from "./components/login_page/Login";
+import Textbox from "./components/textbox/Textbox";
 
-import './App.css';
-import Choice from './components/Choice/Choice';
-import Jumbotron from './components/jumbotron/Jumbotron';
-import Navbar from './components/navbar/Navbar';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Navbar/>
-      <Jumbotron/>
-      <Choice/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/test" element={<Textbox />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

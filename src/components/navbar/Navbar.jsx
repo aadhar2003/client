@@ -1,5 +1,8 @@
 import React from "react";
 import "./Navbar.css";
+import { Link, Navigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -23,19 +26,19 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="/">
-                  Home <span className="sr-only">(current)</span>
-                </a>
+                <Link className={`nav-link`} aria-current="page" to="/">
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Features
-                </a>
+                <Link className={`nav-link`} aria-current="page" to="/login">
+                  Login
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Pricing
-                </a>
+              <Link className={`nav-link`} aria-current="page" to="/test">
+                  Textbox
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
