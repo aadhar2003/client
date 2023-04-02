@@ -31,7 +31,7 @@ mongoose.connect(
 
 //   available routes
 app.use("/api/auth", require("./routes/auth"));
-
+app.use("/api/gpt", require("./routes/gpt"));
 
 
 app.listen(port, function () {
