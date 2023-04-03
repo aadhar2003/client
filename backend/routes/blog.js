@@ -98,7 +98,7 @@ router.put('/updatepost/:id', fetchuser , async (req, res) => {
 // ROUTE-4 :: deleting an existing post - DELETE - "/api/blog/deletepost" - REQUIRES LOGIN
 router.delete("/deletepost/:id", fetchuser, async (req, res) => {
     try {
-      // Find the note to be delete and delete it
+      // Find the post to be delete and delete it
       let post = await Posts.findById(req.params.id);
       if (!post) {
         return res.status(404).send("Not Found");
@@ -112,7 +112,7 @@ router.delete("/deletepost/:id", fetchuser, async (req, res) => {
         else if(post.user.toString() === req.user.id) 
         {
             post = await Posts.findByIdAndDelete(req.params.id);
-            res.json({ Success: "Post has been deleted", note: note });
+            res.json({ Success: "Post has been deleted", Post: post });
     
         }
       }
