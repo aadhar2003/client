@@ -8,7 +8,7 @@ function Textbox() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3001/", {
+    fetch("http://localhost:3001/api/gpt/getrecipe", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
