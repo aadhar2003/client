@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="">
         <nav className="navbar navbar-expand-lg navbar-light bg-light contain">
           <a className="navbar-brand" href="/">
-            Navbar
+            Foodies
           </a>
           <button
             className="navbar-toggler"
@@ -37,34 +37,17 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
               <Link className={`nav-link`} aria-current="page" to="/test">
-                  Textbox
+                  ChatGpt
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link"
                   href="/"
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                 
                 >
-                  Dropdown link
+                  Write
                 </a>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a className="dropdown-item" href="/">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="/">
-                    Another action
-                  </a>
-                  <a className="dropdown-item" href="/">
-                    Something else here
-                  </a>
-                </div>
               </li>
             </ul>
           </div>

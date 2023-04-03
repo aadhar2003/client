@@ -4,16 +4,12 @@ const Jumbotron = () => {
   return (
     <div>
       <div className="jumbotron background">
-        <h1 className="display-4 text-center">Hello, world!</h1>
+        <h1 className="display-4 text-center my-5">Don't Know What to Eat?</h1>
         <p className="lead text-center">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
+          Get Delicious Recipies in a minute
         </p>
-        
-        <p className="text-center">
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
+        <button className="margin-button">Let's Cook!</button>
+
         
       </div>
       <hr className="my-4" />

@@ -58,7 +58,7 @@ app.post("/", async function (req, res) {
 
     const { message } =  req.body;
     console.log("req.body is " );
-    console.log(req.body);
+    console.log(message);
     // console.log(message);
 
     // const message = "egg , spinach , onion";
