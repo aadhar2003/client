@@ -1,0 +1,51 @@
+.About{
+    background-color: #ECFFF6;
+    display: flex;
+    justify-content: space-between;
+}
+.maintext{
+    color: #108905;
+font-family: Roboto;
+font-size: 45px;
+font-weight: 550;
+line-height: 48px;
+text-align: left;
+padding-top: 115px;
+padding-left: 195px;
+height: fit-content;
+width: fit-content;
+
+
+}
+.img img{
+    height: 700px;
+width: 600px;
+border-radius: 0px;
+
+}
+.smalltext{
+    font-size: large;
+padding-top: 25px;
+padding-left: 195px;
+height: fit-content;
+width: fit-content;
+color: #366132;
+font-family: Roboto;
+font-weight: 500;
+
+}
+button{
+    height: 44px;
+    width: 362px;
+    border: 0px;
+    border-radius: 20px;
+    padding: 8px;
+    background-color: #0EAB00;
+    color: white;
+
+
+}
+.button{
+    padding-left: 195px;
+    padding-top: 25px;
+}
