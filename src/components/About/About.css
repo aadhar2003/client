@@ -19,9 +19,8 @@ width: fit-content;
 }
 .img img{
     height: 700px;
-width: 600px;
-border-radius: 0px;
-
+    width: 500px;
+    border-radius: 0px;
 }
 .smalltext{
     font-size: large;
