@@ -1,0 +1,107 @@
+.card {
+  position: relative;
+  width: 380px;
+  height: 476px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_header {
+  width: 348px;
+  height: 98px;
+  text-align: left;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 121.74%;
+  /* or 49px */
+
+  letter-spacing: -0.025em;
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.card_image > img {
+  position: relative;
+  width: 380px;
+  height: 261px;
+  left: 0px;
+  top: 0px;
+
+  border-radius: 20px;
+}
+
+.subtext_container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card_subtext {
+  display: block;
+  height: 29px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 121.74%;
+
+  margin-left: 15px;
+
+  letter-spacing: -0.025em;
+
+  color: #6f6f6f;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.card_rv {
+  display: flex;
+  text-align: right;
+  align-items: bottom;
+  justify-content: right;
+}
+
+.card_link > a {
+  height: 24px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 121.74%;
+  /* or 24px */
+
+  letter-spacing: -0.025em;
+
+  color: #d01818;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  margin-right: 19px;
+  flex-grow: 0;
+}
