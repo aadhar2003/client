@@ -1,0 +1,62 @@
+.Footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ECFFF6;
+    ;
+    height: 160px;
+    align-items: center;
+    position: relative;
+}
+
+.btnText{
+    padding-bottom: 4px;
+}
+#bold{
+    display: inline;
+    font-weight: 600;
+}
+#input-footer{
+    width: 250px;
+    height: 29px;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #BADCB7;
+    border: 0;
+    position: absolute;
+   
+}
+::placeholder{
+    color: #25652B;
+    
+}
+#footer-button{
+    background: #25652B;
+    height: 29px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #BADCB7;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 0;
+    position: relative;
+    margin-left: 223px;
+
+}
+.buttonFooter{
+    margin-left: 187px;
+}
+.links{
+    display: flex;
+    margin-right: 190px;
+    align-items: center;
+    padding-top: 35px;
+}
+.link1{
+    margin-right: 40px;
+}
+.link-items{
+    margin-bottom: 10px;
+}

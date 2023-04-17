@@ -17,7 +17,7 @@ const About = () => {
           suggest tasty meals you can make with what you've got.
         </div>
         <div className="button">
-            <button type="submit">Start cooking now !</button>
+            <button type="submit" id="About-button">Start cooking now !</button>
         </div>
       </div>
 
