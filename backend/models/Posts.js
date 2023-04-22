@@ -11,6 +11,9 @@ const postsSchema =  new mongoose.Schema({
     tag: { type: String},
     edited: {type: Boolean, default: false},
     date: { type: Date, default: Date.now },
+    ingredients: { type : Number, required: true},
+    timereq: { type : Number, required: true},
+    imageURL: { type: String }
   });
   
 module.exports = mongoose.model('Post', postsSchema);
