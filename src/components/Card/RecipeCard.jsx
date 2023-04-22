@@ -1,5 +1,5 @@
 import React from "react";
-import "./Recipecard.css";
+import "./RecipeCard.css";
 // import { Link } from "react-router-dom";
 
 function Recipecard(props) {
