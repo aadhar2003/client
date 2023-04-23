@@ -2,7 +2,7 @@ import React from "react";
 import "./RecipeCard.css";
 // import { Link } from "react-router-dom";
 
-function Recipecard(props) {
+function RecipeCard(props) {
   return (
     <>
         <div className="card">
@@ -32,4 +32,4 @@ function Recipecard(props) {
   );
 }
 
-export default Recipecard;
+export default RecipeCard;

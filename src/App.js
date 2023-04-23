@@ -1,16 +1,15 @@
-
 import './App.css';
 import Nav from './components/navbar/Nav';
-import About from './components/About/About';
 import Footer from './components/Footer/Footer';
-import Trendingsection from './components/Trending/Trendingsection'
+import Gptpage from './components/Gptpage/GptPage';
+import Home from './components/Home/Home';
 
 function App() {
   return (
     <div className="App">
       <Nav/>
-      <About/>
-      <Trendingsection/>
+      {/* <Home/> */}
+      <Gptpage/>
       <Footer/>
     </div>
   );

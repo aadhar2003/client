@@ -1,0 +1,134 @@
+body {
+  background-color: #ecfff6;
+  font-family: "Roboto", "sans-serif";
+}
+
+.top-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+  padding-bottom: 3.2rem;
+}
+
+.top-img {
+  margin-right: 1.2rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 1.2em;
+}
+
+.top-section h1 {
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cont {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.instruction p {
+  font-size: 1.3rem;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+}
+
+.subheading h4 {
+  width: 176px;
+  height: 29px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 121.74%;
+
+  letter-spacing: -0.025em;
+  text-transform: capitalize;
+  color: #25652b;
+}
+
+.form-class {
+  display: flex;
+}
+
+.inputArea {
+  flex: 1;
+  width: 100%;
+  background-color:  #BADCB7;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 3rem;
+  resize: none;
+  border-width: 1px;
+  border-right: none;
+}
+
+.subButton {
+  margin-left: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: none;
+  border-width: 1px;
+  background-color:  #BADCB7;
+  padding-right: 20px;
+}
+
+.form{
+    width: 100%;
+}
+
+.line-break{
+    margin-top: 2rem;
+    text-align: center;
+    /* background-color:  #BADCB7; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3rem;
+}
+
+.line-break p{
+    font-size: 1.2rem;
+    color: #25652B;
+    padding-top: 10px;
+    margin-bottom: auto;
+
+}
+
+.center-text{
+    text-align: center;
+    color: #25652B;
+    margin: 0;
+    padding: 0;
+}
+
+.prompts-container{
+    display: flex;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 6rem;
+}
+
+.prompt{
+    margin: 20px;
+    background-color: #CEE5CB;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+
+}
+
+.prompt button{ 
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.025em;
+    text-transform: capitalize;
+    color: #25652B;
+    border: none;
+    background-color: #CEE5CB;
+
+}
