@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 .About{
     background-color: #ECFFF6;
     display: flex;
@@ -5,7 +6,7 @@
 }
 .maintext{
     color: #108905;
-font-family: Roboto;
+font-family:"Roboto";
 font-size: 45px;
 font-weight: 550;
 line-height: 48px;
@@ -29,7 +30,7 @@ padding-left: 195px;
 height: fit-content;
 width: fit-content;
 color: #366132;
-font-family: Roboto;
+font-family: "Roboto";
 font-weight: 500;
 
 }
