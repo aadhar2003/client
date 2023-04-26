@@ -11,6 +11,7 @@ const CardState = (props) => {
 
 
   const [cards ,setcards] = useState(InitialCards)
+  const [gptResponse, setGptResponse] = useState("")
 
   // GEt all cards
 
@@ -96,7 +97,7 @@ const CardState = (props) => {
 
 
 // // EDIT a card
-  const editCard = async (title, description, procedure, tag, vegetarian) => {
+  const editCard = async (id, title, description, procedure, tag, vegetarian) => {
     // API call
     const response = await fetch(
       `${host}api/blog/updatepost/${id}`,
@@ -126,10 +127,34 @@ const CardState = (props) => {
     }
   };
 
+
+  const callgpt = async (message) => {
+
+    console.log("working on it");
+
+    const response = await fetch(
+      `${host}/api/gpt/getrecipe`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({message}),
+      }
+    );
+
+    const json = await response.json();
+
+    setGptResponse(json.message);
+
+    console.log(gptResponse);
+  };
+
+
   return (
     <cardContext.Provider
-      value={{ cards, getCards , setcards, addCard, deleteCard, editCard }}
-    >
+      value={{ cards, gptResponse ,getCards , setcards, addCard, deleteCard, editCard, callgpt }}>
       {props.children}
     </cardContext.Provider>
   );
