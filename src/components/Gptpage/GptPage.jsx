@@ -21,8 +21,8 @@ function GptPage() {
 
   const handleSubmit = async (event) => {
 
-    settempvis(false);
     event.preventDefault();
+    settempvis(false);
     console.log(`Submitting value: ${inputValue}`);
 
     setloading(true);
@@ -34,11 +34,16 @@ function GptPage() {
 
   };
 
-  const handleClick = (event) => {};
+  const handleClick = async(e) => {
+    console.log(e.target.innerHTML);
+    setInputValue(e.target.innerHTML);
+
+    
+  };
 
   return (
     <>
-      <div className={ tempvis === false && 'temp-section' }>
+      <div className={ tempvis === false ? 'temp-section' : undefined }>
         <div className="top-section">
           <div className="top-img">
             <img src={gptlogo} alt="chatgptlogo" />
@@ -80,7 +85,7 @@ function GptPage() {
         </div>
       </div>
 
-      <div className={ tempvis === false && 'temp-section' }>
+      <div className={ tempvis === false ? 'temp-section' : undefined }>
         <div className="line-break">
           <svg
             width="686.4"
@@ -109,7 +114,7 @@ function GptPage() {
 
         <div className="prompts-container">
           <div className="prompt">
-            <button onClick={handleClick}>
+            <button onClick={handleClick} value="bahot faltu">
               I have sweet potatoes, black beans, and salsa. What should I cook
               for lunch?
             </button>
@@ -150,7 +155,7 @@ function GptPage() {
 
 
   {!loading && (
-     <div className={ tempvis === true && 'temp-section' }>
+     <div className={ tempvis === true ? 'temp-section' : undefined }>
         <div className="cont instr-container reverse-temp">
             <div className="instructions">
             <p>{gptResponse.message}</p>
