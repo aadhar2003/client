@@ -146,9 +146,9 @@ const CardState = (props) => {
 
     const json = await response.json();
 
-    setGptResponse(json.message);
+    setGptResponse(json);
 
-    console.log(gptResponse);
+    console.log(json);
   };
 
 

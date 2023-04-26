@@ -4,32 +4,41 @@ import gptlogo from "./ChatgptLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import cardContext from "../../context/cards/CardContext";
+import { TailSpin } from "react-loader-spinner";
 
 function GptPage() {
   const context = useContext(cardContext);
-  const { callgpt, gptResponse } = context;
 
+  const { callgpt, gptResponse } = context;
   const [inputValue, setInputValue] = useState("");
+
+  const [loading, setloading] = useState(false);
+  const [tempvis, settempvis] = useState(true);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
+
+    settempvis(false);
     event.preventDefault();
     console.log(`Submitting value: ${inputValue}`);
 
+    setloading(true);
     // Add your logic here for what to do with the submitted value
-    callgpt(inputValue);
+    await callgpt(inputValue);
 
-    setInputValue("");
+    console.log("call complete ");
+    setloading(false);
+
   };
 
   const handleClick = (event) => {};
 
   return (
     <>
-      <div className="temp-section">
+      <div className={ tempvis === false && 'temp-section' }>
         <div className="top-section">
           <div className="top-img">
             <img src={gptlogo} alt="chatgptlogo" />
@@ -71,7 +80,7 @@ function GptPage() {
         </div>
       </div>
 
-      <div className="temp-section">
+      <div className={ tempvis === false && 'temp-section' }>
         <div className="line-break">
           <svg
             width="686.4"
@@ -120,9 +129,35 @@ function GptPage() {
         </div>
       </div>
 
-      <div className="cont">
-        {gptResponse && "this is nice"}
-      </div>
+      {loading && (
+       
+
+        <div className="cont parent">
+          <div className="loader">
+            <TailSpin
+              height="80"
+              width="80"
+              color="#4fa94d"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              />
+          </div>
+        </div>
+      )}
+
+
+  {!loading && (
+     <div className={ tempvis === true && 'temp-section' }>
+        <div className="cont instr-container reverse-temp">
+            <div className="instructions">
+            <p>{gptResponse.message}</p>
+            </div>
+        </div>
+        </div>
+      )}
 
       <hr className="ending_line" />
     </>

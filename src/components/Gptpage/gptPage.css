@@ -142,7 +142,7 @@ body {
     margin: 0px;
     color: #25652B;
     opacity: .7;
-    border-width: 2px;
+    /* border-width: 2px; */
 }
 
 
@@ -151,4 +151,26 @@ body {
 {
   display: none;
 
+}
+
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.instructions {
+  display: none;
+  background-color: #BADCB7;
+  padding : 20px 30px;
+  border-radius: 20px;
+}
+
+.instr-container{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
 }
