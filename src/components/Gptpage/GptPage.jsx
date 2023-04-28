@@ -38,7 +38,7 @@ function GptPage() {
     console.log(e.target.innerHTML);
     setInputValue(e.target.innerHTML);
 
-    
+
   };
 
   return (
@@ -78,7 +78,7 @@ function GptPage() {
               className="inputArea"
               onChange={handleInputChange}
             />
-            <button type="submit" className="subButton">
+            <button type="submit" disabled={loading} className="subButton">
               <FontAwesomeIcon icon={faSearch} />
             </button>
           </form>
@@ -158,7 +158,7 @@ function GptPage() {
      <div className={ tempvis === true ? 'temp-section' : undefined }>
         <div className="cont instr-container reverse-temp">
             <div className="instructions">
-            <p>{gptResponse.message}</p>
+            <p>{gptResponse}</p>
             </div>
         </div>
         </div>

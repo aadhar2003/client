@@ -1,15 +1,35 @@
-import React from "react";
+import React , {useEffect} from 'react'
 import "./Nav.css";
 import title from "./title.png";
+import { Link, Navigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
+
 const Nav = () => {
+
+  let location = useLocation();
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    // console.log(location.pathname);
+  }, [location]);
+
+  const handleLogout= async() => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  }
+
   return (
     <div className="Nav">
       <div className="left">
         <img src={title} alt="Uncooked" />
       </div>
       <div className="right">
-        <div className="navitem review">Review</div>
-        <div className="navitem chat">ChatGPT</div>
+        <Link className="navitem review" to="/" role="button">Home</Link>
+        <Link className="navitem chat" to="/gpt" role="button">ChatGPT</Link>
+
         <div className="navitem write">Write</div>
         <div className="navitem login">Login</div>
       </div>
