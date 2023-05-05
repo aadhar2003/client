@@ -7,7 +7,7 @@ import Hpost from '../HPost/Hpost'
 function Home() {
   return (
     <>
-       <About/>
+      <About/>
       <Trendingsection/>
       <FindRecipies/>
       <Hpost/>

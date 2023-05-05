@@ -18,6 +18,10 @@ body {
   max-height: 1.2em;
 }
 
+.top-section img {
+  translate: 0 -11px;
+}
+
 .top-section h1 {
   font-size: 3em;
   text-align: center;
@@ -28,6 +32,10 @@ body {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.instruction{
+  display: block;
 }
 
 .instruction p {
@@ -65,7 +73,10 @@ body {
   resize: none;
   border-width: 1px;
   border-right: none;
+
+  padding-left: 13px;
 }
+
 
 .subButton {
   margin-left: 0px;
@@ -75,6 +86,7 @@ body {
   border-width: 1px;
   background-color:  #BADCB7;
   padding-right: 20px;
+  padding-left: 12px;
 }
 
 .form{
@@ -130,5 +142,42 @@ body {
     color: #25652B;
     border: none;
     background-color: #CEE5CB;
+}
+
+.ending_line{
+    margin: 0px;
+    color: #25652B;
+    opacity: .7;
+    /* border-width: 2px; */
+}
+
+
+
+.temp-section
+{
+  display: none;
 
 }
+
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.instructions {
+  display: none;
+  background-color: #BADCB7;
+  padding : 20px 30px;
+  border-radius: 20px;
+}
+
+.instr-container{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+

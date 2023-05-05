@@ -5,56 +5,45 @@ import { useState } from "react";
 const CardState = (props) => {
   const host = "http://localhost:3001";
 
-  const InitialCards = [
-   
-  ];
+  const InitialCards = [];
 
-
-  const [cards ,setcards] = useState(InitialCards)
+  const [cards, setcards] = useState(InitialCards);
+  const [gptResponse, setGptResponse] = useState("");
 
   // GEt all cards
 
   const getCards = async () => {
     // API call
-    const response = await fetch(
-     `${host}/api/blog/getposts`,
-     {
-       method: "GET",
-       headers: {
-         "Content-Type": "application/json",
-       },
-     }
-   );
+    const response = await fetch(`${host}/api/blog/getposts`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     const json = await response.json();
     //  console.log(json)
     setcards(json);
- };
-
+  };
 
   // Add card
   const addCard = async (title, description, procedure, tag, vegetarian) => {
-     // API call
-     const response = await fetch(
-      `${host}/api/blog/addpost`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token":
-            localStorage.getItem("token"),
-        },
+    // API call
+    const response = await fetch(`${host}/api/blog/addpost`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
 
-        body: JSON.stringify({title, description, procedure, tag, vegetarian}),
-      }
-    );
-
+      body: JSON.stringify({ title, description, procedure, tag, vegetarian }),
+    });
 
     const card = {
-        // TODO : correct user and _id
-        // ID AND USER HERE FOR TESTING
+      // TODO : correct user and _id
+      // ID AND USER HERE FOR TESTING
       _id: "63a4c599dd6cd2769bd0b956",
-      user: "63a065379d237c833dc6f461", // put any user or id here 
+      user: "63a065379d237c833dc6f461", // put any user or id here
       title: title,
       description: description,
       procedure: procedure,
@@ -67,23 +56,16 @@ const CardState = (props) => {
     setcards(cards.concat(card));
   };
 
-
-// DELETE a card
-  const deleteCard = async(id) => {
-
+  // DELETE a card
+  const deleteCard = async (id) => {
     // API call
-    const response = await fetch(
-      `${host}/api/blog/deletepost/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token":
-            localStorage.getItem("token"),
-        },
-
-      }
-    );
+    const response = await fetch(`${host}/api/blog/deletepost/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
+    });
 
     const json = response.json();
     console.log(json);
@@ -94,23 +76,25 @@ const CardState = (props) => {
     setcards(newCards);
   };
 
-
-// // EDIT a card
-  const editCard = async (title, description, procedure, tag, vegetarian) => {
+  // // EDIT a card
+  const editCard = async (
+    id,
+    title,
+    description,
+    procedure,
+    tag,
+    vegetarian
+  ) => {
     // API call
-    const response = await fetch(
-      `${host}api/blog/updatepost/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token":
-            localStorage.getItem("token"),
-        },
+    const response = await fetch(`${host}api/blog/updatepost/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
 
-        body: JSON.stringify({title, description, procedure, tag, vegetarian}),
-      }
-    );
+      body: JSON.stringify({ title, description, procedure, tag, vegetarian }),
+    });
 
     const jsonRes = response.json();
 
@@ -126,9 +110,44 @@ const CardState = (props) => {
     }
   };
 
+  // const correct = async (msg) => {
+  //   const replaced = msg.replace(/\n/g, '{\n}');
+  //   return replaced;
+  // };
+
+  const callgpt = async (message) => {
+    console.log("working on it");
+
+    const response = await fetch(`${host}/api/gpt/getrecipe`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({ message }),
+    });
+
+    const json = await response.json();
+
+    // const corrected = await correct(json.message);
+
+    setGptResponse(json.message);
+
+    console.log(json.message);
+  };
+
   return (
     <cardContext.Provider
-      value={{ cards, getCards , setcards, addCard, deleteCard, editCard }}
+      value={{
+        cards,
+        gptResponse,
+        getCards,
+        setcards,
+        addCard,
+        deleteCard,
+        editCard,
+        callgpt,
+      }}
     >
       {props.children}
     </cardContext.Provider>

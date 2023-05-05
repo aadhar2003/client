@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #ECFFF6;
-    ;
+    
 }
 .right{
     display: flex;
@@ -39,9 +39,15 @@
     text-align: center;
     background: #D2F5E4;
     padding-top: 6px;
-
-
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
 .write{
     width: 123px;
     height: 38px;

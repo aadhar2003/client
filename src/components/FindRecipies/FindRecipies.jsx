@@ -28,7 +28,7 @@ const FindRecipies = () => {
           <path d="M0.5 1.5H360.5" stroke="#25652B" stroke-width="3" />
         </svg>
       </div>
-      <div className="instructions">
+      <div className="cook-instructions">
         <div className="instruct-1">
           <img src={ty} alt=""/>
           <p>Type in the ingredients with<br/> which you want to cook<br/>using our chat gpt feature</p>
