@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 80px;
 }
 .Post-text input {
   display: block;
@@ -28,4 +29,53 @@
 #small-circle{
     top: 20px;
     left: 20px;
+}
+.Post-text p{
+  font-family: "Roboto";
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: -0.025em;
+text-align: left;
+color: #25652B;
+
+}
+.Post-text input{
+  width: 540px;
+  border-radius: 18px;
+  margin-bottom: 6px;
+  border: 0px;
+  background-color: #BADCB7;
+  height: 35px;
+  box-sizing: border-box;
+
+}
+#Post-Des{
+  height: 70px;
+}
+.Post-text input::placeholder{
+  color: #25652B;
+  
+
+}
+.Post-text input[type=text]{
+  box-sizing: border-box;
+  padding: 4px 15px;
+}
+.Post-text input[type=number]{
+  box-sizing: border-box;
+  padding: 4px 15px;
+}
+#Pt-button{
+  margin-top: 10px;
+  width: 540px;
+  background-color: #ecfff6;
+  border: 3px solid #BADCB7;
+  color:  #25652B;
+
+  font-weight: 600;
+  text-align: center;
+  border-radius: 17px;
+  padding: 9px 0px;
+  font-family: "Roboto";
 }

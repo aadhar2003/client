@@ -30,7 +30,7 @@ const Nav = () => {
         <Link className="navitem review" to="/" role="button">Home</Link>
         <Link className="navitem chat" to="/gpt" role="button">ChatGPT</Link>
 
-        <div className="navitem write">Write</div>
+        <Link className="navitem write" to='/post'>Write</Link>
         <div className="navitem login">Login</div>
       </div>
     </div>
