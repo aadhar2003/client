@@ -3,6 +3,8 @@ import cook from "./img/cook.png";
 import "./Post.css";
 
 const Post = () => {
+  const host='http://localhost:3001/api/blog/addpost';
+  
   return (
     <div className="Post">
   
@@ -19,7 +21,7 @@ const Post = () => {
 
       <div className="P-Header">
         <h2>Post Your Recipies</h2>
-        <svg
+        {/* <svg
         id="small-circle"
         width="49"
         height="49"
@@ -34,15 +36,15 @@ const Post = () => {
           fill="#C0E3BD"
           fill-opacity="0.66"
         />
-      </svg>
+      </svg> */}
       </div>
       <div className="Post-form">
-        <div className="Post-img">
+        <div className="Post-img"> 
           <img src={cook} alt="" />
         </div>
         <div className="Post-text">
           <p>Recipe Details</p>
-          <form action="" method="post">
+          <form action={host} method="post">
             <input
               type="text"
               name="title"
@@ -57,7 +59,8 @@ const Post = () => {
             <input
               type="text"
               name="description"
-              placeholder="enter directions for the recipe"
+              placeholder="Enter directions for the recipe"
+              id="Post-Des"
             />
             <input
               type="text"
@@ -70,9 +73,10 @@ const Post = () => {
               placeholder="Upload picture of dish"
             />
           </form>
-          <button id="Hp-btn">Preview Post</button>
+          <button type="submit" id="Pt-button">Preview Post</button>
         </div>
       </div>
+      <hr />
     </div>
   );
 };
