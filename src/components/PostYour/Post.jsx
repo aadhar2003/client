@@ -1,13 +1,32 @@
 import React from "react";
 import cook from "./img/cook.png";
 import "./Post.css";
+import { useState,useContext } from "react";
+import cardContext from "../../context/cards/CardContext";
 
 const Post = () => {
-  const host='http://localhost:3001/api/blog/addpost';
-  
+  const context = useContext(cardContext);
+const {preview,fsubmit}=context;
+  const host = "http://localhost:3001/api/blog/addpost";
+  const [allValues, setAllValues] = useState({
+    title: "",
+    ingredients: "",
+    description: "",
+    vegetarian: "",
+    imageURL: "",
+    procedure: ""
+  });
+  const changeHandler = (e) => {
+    setAllValues({ ...allValues, [e.target.name]: e.target.value });
+  };
+  const submitHandler=async(e)=>{
+    e.preventDefault();
+    console.log('data submitted');
+    await fsubmit(allValues);
+
+  }
   return (
     <div className="Post">
-  
       {/* <svg
       id="big-circle"
         width="150"
@@ -39,41 +58,60 @@ const Post = () => {
       </svg> */}
       </div>
       <div className="Post-form">
-        <div className="Post-img"> 
+        <div className="Post-img">
           <img src={cook} alt="" />
         </div>
         <div className="Post-text">
           <p>Recipe Details</p>
-          <form action={host} method="post">
+          <form  onSubmit={submitHandler}>
             <input
               type="text"
               name="title"
+              value={allValues.title}
               placeholder="Enter name of the dish"
+              onChange={changeHandler}
             />
             <input
               type="number"
               name="ingredients"
+              value={allValues.ingredients}
               placeholder="No. of ingredients"
+              onChange={changeHandler}
             />
-            <input type="text" placeholder="Enter ingredients" />
+            <input
+              type="text"
+              placeholder="Enter ingredients"
+              value={allValues.procedure}
+              name="procedure"
+              onChange={changeHandler}
+            />
             <input
               type="text"
               name="description"
               placeholder="Enter directions for the recipe"
+              value={allValues.description}
               id="Post-Des"
+              onChange={changeHandler}
             />
             <input
               type="text"
               name="vegetarian"
+              value={allValues.vegetarian}
               placeholder="Vegetarian or not?"
+              onChange={changeHandler}
             />
             <input
               type="text"
               name="imageURL"
+              value={allValues.imageURL}
               placeholder="Upload picture of dish"
+              onChange={changeHandler}
             />
+            <button type="submit" id="Pt-button">
+            Preview Post
+          </button>
           </form>
-          <button type="submit" id="Pt-button">Preview Post</button>
+          
         </div>
       </div>
       <hr />

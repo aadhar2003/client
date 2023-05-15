@@ -9,6 +9,7 @@ const CardState = (props) => {
 
   const [cards, setcards] = useState(InitialCards);
   const [gptResponse, setGptResponse] = useState("");
+  const [preview,setPreview]=useState(false);
 
   // GEt all cards
 
@@ -135,6 +136,18 @@ const CardState = (props) => {
 
     console.log(json.message);
   };
+  const fsubmit=async (data)=>{
+    const response = await fetch(`${host}/api/blog/addpost`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({ data }),
+    });
+    setPreview(true);
+
+  }
 
   return (
     <cardContext.Provider
