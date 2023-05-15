@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
 
+
   let location = useLocation();
   let navigate = useNavigate();
 
@@ -31,7 +32,12 @@ const Nav = () => {
         <Link className="navitem chat" to="/gpt" role="button">ChatGPT</Link>
 
         <Link className="navitem write" to='/post'>Write</Link>
-        <div className="navitem login">Login</div>
+        {!localStorage.getItem("token")?
+        <Link className="navitem login" to='/login'>Login</Link>
+        :
+        <button className="navitem login"  onClick={handleLogout} role="button" >Logout</button>
+
+        }
       </div>
     </div>
   );

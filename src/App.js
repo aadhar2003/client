@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import CardState from "./context/cards/CardState";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Post from './components/PostYour/Post';
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="gpt" element={<Gptpage/>} />
           <Route path="post" element={<Post/>} />
+          <Route path="login" element={<Login/>} />
 
         </Routes>
           <Footer />
