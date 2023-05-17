@@ -3,28 +3,48 @@ import cook from "./img/cook.png";
 import "./Post.css";
 import { useState,useContext } from "react";
 import cardContext from "../../context/cards/CardContext";
+import { Fab } from "@mui/material";
 
 const Post = () => {
   const context = useContext(cardContext);
-const {preview,fsubmit}=context;
-  const host = "http://localhost:3001/api/blog/addpost";
+// const {preview,fsubmit}=context;
+
+const {addCard}=context;
+
+  // const host = "http://localhost:3001/api/blog/addpost"; // iska kya karna hai???
   const [allValues, setAllValues] = useState({
     title: "",
     ingredients: "",
     description: "",
     vegetarian: "",
     imageURL: "",
-    procedure: ""
+    procedure: "",
+    timereq: ""
   });
+
   const changeHandler = (e) => {
     setAllValues({ ...allValues, [e.target.name]: e.target.value });
   };
-  const submitHandler=async(e)=>{
+  
+  const submitHandler = async(e) => {
     e.preventDefault();
     console.log('data submitted');
-    await fsubmit(allValues);
+    // const res = await fsubmit(allValues);
+
+    let vegbool;
+    if(allValues.vegetarian[0] ==  "f")
+    {
+      vegbool = false;
+    }
+    else{
+      vegbool = true;
+    }
+    
+    await addCard(allValues.title, allValues.description, allValues.procedure, "none" , true, Number(allValues.ingredients), Number(allValues.timereq), allValues.imageURL);
+
 
   }
+  
   return (
     <div className="Post">
       {/* <svg
@@ -76,6 +96,14 @@ const {preview,fsubmit}=context;
               name="ingredients"
               value={allValues.ingredients}
               placeholder="No. of ingredients"
+              onChange={changeHandler}
+            />
+
+          <input
+              type="number"
+              name="timereq"
+              value={allValues.timereq}
+              placeholder="Preparation time in minutes"
               onChange={changeHandler}
             />
             <input
