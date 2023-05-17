@@ -41,11 +41,11 @@ fetchuser, // middleware to get user info from jwt
             user: req.user.id,
             title: req.body.title,
             description: req.body.description,
-            // procedure: req.body.procedure,
+            procedure: req.body.procedure,
             vegetarian: req.body.vegetarian,
             // tag: req.body.tag,
             ingredients: req.body.ingredients,
-            timereq: req.body.timereq,
+            // timereq: req.body.timereq,
             imageURL: req.body.imageURL
           });
 

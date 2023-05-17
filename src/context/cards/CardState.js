@@ -136,11 +136,13 @@ const CardState = (props) => {
 
     console.log(json.message);
   };
-  const fsubmit=async (data)=>{
+  const fsubmit =async(data)=>{
+    const token=localStorage.getItem("token");
     const response = await fetch(`${host}/api/blog/addpost`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "auth-token" : `${token}`
       },
 
       body: JSON.stringify({ data }),
@@ -160,6 +162,7 @@ const CardState = (props) => {
         deleteCard,
         editCard,
         callgpt,
+        fsubmit
       }}
     >
       {props.children}
