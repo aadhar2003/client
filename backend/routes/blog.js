@@ -29,7 +29,7 @@ fetchuser, // middleware to get user info from jwt
     body("description", "description must be atleast 8 characters").isLength({min: 8,}),
     body("vegetarian", "enter a valid boolean for vegetarian status").isBoolean(),
     body("ingredients", "enter a valid number of ingredients").not().isEmpty(),
-    // body("timereq", "enter a valid requered time").not().isEmpty(),
+    body("timereq", "enter a valid requered time").not().isEmpty(),
 ], async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -43,9 +43,9 @@ fetchuser, // middleware to get user info from jwt
             description: req.body.description,
             procedure: req.body.procedure,
             vegetarian: req.body.vegetarian,
-            // tag: req.body.tag,
+            tag: req.body.tag,
             ingredients: req.body.ingredients,
-            // timereq: req.body.timereq,
+            timereq: req.body.timereq,
             imageURL: req.body.imageURL
           });
 

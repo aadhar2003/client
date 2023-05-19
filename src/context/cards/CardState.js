@@ -1,6 +1,7 @@
 import React from "react";
 import cardContext from "./CardContext";
 import { useState } from "react";
+import { json } from "react-router-dom";
 
 const CardState = (props) => {
   const host = "http://localhost:3001";
@@ -28,7 +29,7 @@ const CardState = (props) => {
   };
 
   // Add card
-  const addCard = async (title, description, procedure, tag, vegetarian) => {
+  const addCard = async (title, description, procedure, tag, vegetarian, ingredients, timereq, imageURL ) => {
     // API call
     const response = await fetch(`${host}/api/blog/addpost`, {
       method: "POST",
@@ -37,8 +38,10 @@ const CardState = (props) => {
         "auth-token": localStorage.getItem("token"),
       },
 
-      body: JSON.stringify({ title, description, procedure, tag, vegetarian }),
+      body: JSON.stringify({ title, description, procedure, tag, vegetarian, ingredients, timereq , imageURL}),
     });
+
+    console.log(response);
 
     const card = {
       // TODO : correct user and _id
@@ -55,6 +58,7 @@ const CardState = (props) => {
 
     console.log("adding a new card");
     setcards(cards.concat(card));
+
   };
 
   // DELETE a card
@@ -137,7 +141,22 @@ const CardState = (props) => {
     console.log(json.message);
   };
   const fsubmit =async(data)=>{
-    const token=localStorage.getItem("token");
+
+    // console.log(data);
+    const token = localStorage.getItem("token");
+
+   
+
+    const temp = {
+      "title": "egg biryani part 2",
+       "description": "foooooo egg asdads",
+       "procedure": "anda jalado",
+       "tag": "asdasd egg",
+       "vegetarian" : true,
+       "ingredients" : 15,
+       "timereq" : 100
+   }
+
     const response = await fetch(`${host}/api/blog/addpost`, {
       method: "POST",
       headers: {
@@ -145,9 +164,13 @@ const CardState = (props) => {
         "auth-token" : `${token}`
       },
 
-      body: JSON.stringify({ data }),
+      body: JSON.stringify({ temp }),
     });
-    setPreview(true);
+
+
+    // setPreview(true);
+
+    console.log(response);
 
   }
 
