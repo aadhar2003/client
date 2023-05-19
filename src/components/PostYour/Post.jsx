@@ -94,7 +94,7 @@ const {preview,fsubmit}=context;
               onChange={changeHandler}
             />
             <input
-              type="text"
+              type="checkbox"
               name="vegetarian"
               value={allValues.vegetarian}
               placeholder="Vegetarian or not?"
