@@ -1,15 +1,16 @@
 import React from "react";
 import cook from "./img/cook.png";
 import "./Post.css";
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import cardContext from "../../context/cards/CardContext";
 import { Fab } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Post = () => {
   const context = useContext(cardContext);
-// const {preview,fsubmit}=context;
+  // const {preview,fsubmit}=context;
 
-const {addCard}=context;
+  const { addCard } = context;
 
   // const host = "http://localhost:3001/api/blog/addpost"; // iska kya karna hai???
   const [allValues, setAllValues] = useState({
@@ -19,32 +20,43 @@ const {addCard}=context;
     vegetarian: "",
     imageURL: "",
     procedure: "",
-    timereq: ""
+    timereq: "",
   });
 
   const changeHandler = (e) => {
     setAllValues({ ...allValues, [e.target.name]: e.target.value });
   };
-  
-  const submitHandler = async(e) => {
+  const text = () => {
+    console.log('text');
+    const des = document.getElementById("descrip").innerText;
+    allValues.description = des;
+    console.log(des);
+  };
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log('data submitted');
+    console.log("data submitted");
     // const res = await fsubmit(allValues);
 
     let vegbool;
-    if(allValues.vegetarian[0] ==  "f")
-    {
+    if (allValues.vegetarian[0] == "f") {
       vegbool = false;
-    }
-    else{
+    } else {
       vegbool = true;
     }
-    
-    await addCard(allValues.title, allValues.description, allValues.procedure, "none" , true, Number(allValues.ingredients), Number(allValues.timereq), allValues.imageURL);
 
+    await addCard(
+      allValues.title,
+      allValues.description,
+      allValues.procedure,
+      "none",
+      true,
+      Number(allValues.ingredients),
+      Number(allValues.timereq),
+      allValues.imageURL
+    );
+  };
 
-  }
-  
   return (
     <div className="Post">
       {/* <svg
@@ -83,7 +95,7 @@ const {addCard}=context;
         </div>
         <div className="Post-text">
           <p>Recipe Details</p>
-          <form  onSubmit={submitHandler}>
+          <form>
             <input
               type="text"
               name="title"
@@ -99,7 +111,7 @@ const {addCard}=context;
               onChange={changeHandler}
             />
 
-          <input
+            <input
               type="number"
               name="timereq"
               value={allValues.timereq}
@@ -113,19 +125,22 @@ const {addCard}=context;
               name="procedure"
               onChange={changeHandler}
             />
-            <input
+            {/* <input
               type="text"
               name="description"
               placeholder="Enter directions for the recipe"
               value={allValues.description}
               id="Post-Des"
               onChange={changeHandler}
-            />
+            /> */}
+            <textarea
+              name="description" id="descrip" cols="30" rows="10" onChange={changeHandler} placeholder="Enter directions for the recipe" value={allValues.description}></textarea>
             <input
-              type="checkbox"
+              type="text"
               name="vegetarian"
               value={allValues.vegetarian}
               placeholder="Vegetarian or not?"
+              // onClick={text}
               onChange={changeHandler}
             />
             <input
@@ -135,11 +150,10 @@ const {addCard}=context;
               placeholder="Upload picture of dish"
               onChange={changeHandler}
             />
-            <button type="submit" id="Pt-button">
-            Preview Post
-          </button>
+            <Link className="Pt-button" to="/preview" state={allValues}>
+              Preview Post
+            </Link>
           </form>
-          
         </div>
       </div>
       <hr />

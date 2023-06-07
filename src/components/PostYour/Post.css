@@ -40,9 +40,19 @@ text-align: left;
 color: #25652B;
 
 }
-.Post-text input{
+.Post-text input {
   width: 540px;
   border-radius: 18px;
+  margin-bottom: 6px;
+  border: 0px;
+  background-color: #BADCB7;
+  height: 35px;
+  box-sizing: border-box;
+
+}
+.Post-text textarea{
+  width: 540px;
+  /* border-radius: 18px; */
   margin-bottom: 6px;
   border: 0px;
   background-color: #BADCB7;
@@ -53,8 +63,20 @@ color: #25652B;
 #Post-Des{
   height: 70px;
 }
+#descrip{
+  height: 70px;
+}
+.Post-text textarea::placeholder{
+  color: #25652B;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  /* text-indent: 30px; */
+
+}
+
 .Post-text input::placeholder{
   color: #25652B;
+
   
 
 }
@@ -66,7 +88,7 @@ color: #25652B;
   box-sizing: border-box;
   padding: 4px 15px;
 }
-#Pt-button{
+.Pt-button{
   margin-top: 10px;
   width: 540px;
   background-color: #ecfff6;

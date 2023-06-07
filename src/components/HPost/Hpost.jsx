@@ -1,6 +1,7 @@
 import React from "react";
 import cook from "./img/cook.png";
 import "./Hpost.css";
+import { Link } from "react-router-dom";
 
 const Hpost = () => {
   return (
@@ -37,7 +38,7 @@ const Hpost = () => {
             enthusiasts. Join our community<br/>today and explore the world of<br/>
             culinary delights.
           </p>
-          <button id="Hp-btn">Post Now</button>
+          <Link id="Hp-btn" to='/post'>Post Now</Link>
         </div>
       </div>
     </div>
