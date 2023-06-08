@@ -23,11 +23,13 @@ const Post = () => {
     timereq: "",
   });
 
+
+
   const changeHandler = (e) => {
     setAllValues({ ...allValues, [e.target.name]: e.target.value });
   };
   const text = () => {
-    console.log('text');
+    console.log("text");
     const des = document.getElementById("descrip").innerText;
     allValues.description = des;
     console.log(des);
@@ -134,7 +136,14 @@ const Post = () => {
               onChange={changeHandler}
             /> */}
             <textarea
-              name="description" id="descrip" cols="30" rows="10" onChange={changeHandler} placeholder="Enter directions for the recipe" value={allValues.description}></textarea>
+              name="description"
+              id="descrip"
+              cols="30"
+              rows="10"
+              onChange={changeHandler}
+              placeholder="Enter directions for the recipe"
+              value={allValues.description}
+            ></textarea>
             <input
               type="text"
               name="vegetarian"
@@ -148,6 +157,7 @@ const Post = () => {
               name="imageURL"
               value={allValues.imageURL}
               placeholder="Upload picture of dish"
+             
               onChange={changeHandler}
             />
             <Link className="Pt-button" to="/preview" state={allValues}>
