@@ -168,7 +168,7 @@ body {
 }
 
 .instructions {
-  display: none;
+  display: block;
   background-color: #BADCB7;
   padding : 20px 30px;
   border-radius: 20px;
