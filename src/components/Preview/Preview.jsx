@@ -21,7 +21,7 @@ const Preview = (props) => {
     // const res = await fsubmit(allValues);
 
     let vegbool;
-    if (data.vegetarian[0] == "f") {
+    if (data.vegetarian[0] == "f" || data.vegetarian[0].toLowerCase() == 'n') {
       vegbool = false;
     } else {
       vegbool = true;
@@ -52,7 +52,7 @@ const Preview = (props) => {
 
         <Card2
           title={data.title}
-          imageUrl={data.imageUrl}
+          imageUrl={data.imageURL}
           reqtime={data.timereq}
           ingredients={data.ingredients}
           className="Card"

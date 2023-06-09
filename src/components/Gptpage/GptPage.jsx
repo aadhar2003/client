@@ -121,7 +121,7 @@ function GptPage() {
           </div>
           <div className="prompt">
             <button onClick={handleClick}>
-              I have ground beef, bell peppers, and rice. What recipe can I make
+              I have panner, cheese, and mayonnaise. What recipe can I make
               for a filling meal?
             </button>
           </div>
