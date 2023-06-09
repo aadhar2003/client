@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Post from './components/PostYour/Post';
 import Login from "./components/Login/Login";
 import Preview from "./components/Preview/Preview";
+import View from "./components/View/View";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="post" element={<Post/>} />
           <Route path="login" element={<Login/>} />
           <Route path="preview" element={<Preview/>} />
+          <Route path="view" element={<View/>} />
         </Routes>
           <Footer />
         </Router>

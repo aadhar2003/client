@@ -28,7 +28,7 @@ const Nav = () => {
         <img src={title} alt="Uncooked" />
       </div>
       <div className="right">
-        <Link className="navitem review" to="/" role="button">Home</Link>
+        <Link className="navitem review" to="/view" role="button">View</Link>
         <Link className="navitem chat" to="/gpt" role="button">ChatGPT</Link>
 
         <Link className="navitem write" to='/post'>Write</Link>
