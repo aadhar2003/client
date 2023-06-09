@@ -48,7 +48,7 @@ const View = () => {
         cards.map(e=> {
             return<Card2
             key={e._id}
-            imageUrl={e.imageUrl}
+            imageUrl={e.imageURL}
             title={e.title}
             reqtime={e.reqtime}
             ingredients={e.ingredients}

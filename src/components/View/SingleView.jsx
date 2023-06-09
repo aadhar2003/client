@@ -19,7 +19,7 @@ const SingleView = () => {
 
       <Card2
         title={data.title}
-        imageUrl={data.imageURL}
+        imageUrl={data.imageUrl}
         reqtime={data.timereq}
         ingredients={data.ingredients}
         className="Card"
