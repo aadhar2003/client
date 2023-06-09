@@ -1,0 +1,8 @@
+.view{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 198px;
+}

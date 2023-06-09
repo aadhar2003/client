@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card2.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Card2(props) {
   return (
@@ -21,10 +21,9 @@ function Card2(props) {
           </div>
 
           <div className="card_rv">
-            {/* <div className="card_link">
-            <Link to="#">view recipe</Link>
-            <a href=""> view recipe</a>
-            </div> */}
+            <div className="card_link">
+            <Link to="/Sview" state={props}>view recipe</Link>
+            </div>
           </div>
          
         </div>
