@@ -1,8 +1,10 @@
-.view{
+.flex-container{
     display: flex;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
-    /* flex-direction: row; */
-    margin-top: 100px;
-    margin-bottom: 198px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+
+    margin-top: 150px;
+
 }

@@ -25,7 +25,9 @@ const Nav = () => {
   return (
     <div className="Nav">
       <div className="left">
-        <img src={title} alt="Uncooked" />
+
+      <Link  to="/" role="button"> <img src={title} alt="Uncooked" /></Link>
+      
       </div>
       <div className="right">
         <Link className="navitem review" to="/view" role="button">View</Link>

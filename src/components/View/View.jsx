@@ -5,6 +5,7 @@ import RecipeCard from "../Card/RecipeCard";
 import Card2 from "../Card/Card2";
 import { render } from "react-dom";
 import './View.css'
+import { Card } from "@mui/material";
 
 const View = () => {
 //   const Show = ({ data }) => {
@@ -36,25 +37,20 @@ const View = () => {
   }, []);
 
   return (
-    <div className="view">
-      {/* <Card2
-          imageUrl={cards[0].imageUrl}
-          title={cards[0].title}
-          reqtime={cards[0].reqtime}
-          ingredients={cards[0].ingredients}
-        />; */}
-      {/* <Show data={cards} /> */}
+    <div className="flex-container">
+
       {
         cards.map(e=> {
-            return<Card2
-            key={e._id}
-            imageUrl={e.imageURL}
-            title={e.title}
-            reqtime={e.reqtime}
-            ingredients={e.ingredients}
-            procedure={e.procedure}
-            description={e.description}
-          />;
+          return  <div className="view"><RecipeCard
+          key={e._id}
+          imageUrl={e.imageURL}
+          title={e.title}
+          reqtime={e.timereq}
+          ingredients={e.ingredients}
+          procedure={e.procedure}
+          description={e.description}
+          />
+        </div>;
         })
       }
     </div>
