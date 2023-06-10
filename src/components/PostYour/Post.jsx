@@ -3,7 +3,6 @@ import cook from "./img/cook.png";
 import "./Post.css";
 import { useState, useContext } from "react";
 import cardContext from "../../context/cards/CardContext";
-import { Fab } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Post = () => {

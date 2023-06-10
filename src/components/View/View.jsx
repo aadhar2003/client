@@ -2,10 +2,10 @@ import { useEffect, useContext } from "react";
 import React from "react";
 import cardContext from "../../context/cards/CardContext";
 import RecipeCard from "../Card/RecipeCard";
-import Card2 from "../Card/Card2";
-import { render } from "react-dom";
+// import Card2 from "../Card/Card2";
+// import { render } from "react-dom";
 import './View.css'
-import { Card } from "@mui/material";
+
 
 const View = () => {
 //   const Show = ({ data }) => {
@@ -30,7 +30,7 @@ const View = () => {
 
 // ]
   const context = useContext(cardContext);
-  const { cards, setcards, getCards } = context;
+  const { cards, getCards } = context;
 
   useEffect(() => {
     getCards();
