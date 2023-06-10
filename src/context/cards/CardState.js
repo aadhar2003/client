@@ -10,7 +10,7 @@ const CardState = (props) => {
 
   const [cards, setcards] = useState(InitialCards);
   const [gptResponse, setGptResponse] = useState("");
-  const [preview,setPreview]=useState(false);
+  // const [preview,setPreview]=useState(false);
 
   // GEt all cards
 
@@ -102,6 +102,7 @@ const CardState = (props) => {
     });
 
     const jsonRes = response.json();
+    console.log(jsonRes);
 
     // Logic to edit on client
     for (let i = 0; i < cards.length; i++) {

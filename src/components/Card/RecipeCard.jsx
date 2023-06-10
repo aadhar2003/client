@@ -7,7 +7,7 @@ function RecipeCard(props) {
     <>
         <div className="card">
           <div className="card_image">
-            <img src= {props.imageUrl} alt="photo of the recipe" />
+            <img src= {props.imageUrl} alt="dish" />
           </div>
 
           <div className="header_container">
