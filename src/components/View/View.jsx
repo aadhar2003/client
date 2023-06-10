@@ -38,7 +38,6 @@ const View = () => {
 
   return (
     <div className="flex-container">
-
       {
         cards.map(e=> {
           return  <div className="view"><RecipeCard
