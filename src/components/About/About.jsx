@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import food from "./food_landing.png";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -17,7 +18,11 @@ const About = () => {
           suggest tasty meals you can make with what you've got.
         </div>
         <div className="button">
-            <button type="submit" id="About-button">Start cooking now !</button>
+        <Link to="/gpt">
+            <button type="submit" id="About-button"> 
+           Start Cooking Now!
+            </button>
+            </Link>
         </div>
       </div>
 

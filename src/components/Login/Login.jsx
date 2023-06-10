@@ -47,7 +47,7 @@ const Login = () => {
       if(json.hasOwnProperty("error") || json.hasOwnProperty("errors")){
         
         let errormessage;
-        if(json.error != undefined)
+        if(json.error !== undefined)
         {
             errormessage = json.error;
         }
@@ -88,7 +88,7 @@ const Login = () => {
       if(json.hasOwnProperty("error") || json.hasOwnProperty("errors")){
         
         let errormessage;
-        if(json.error != undefined)
+        if(json.error !== undefined)
         {
             errormessage = json.error;
         }

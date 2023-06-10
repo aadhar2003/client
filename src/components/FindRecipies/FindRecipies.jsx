@@ -3,6 +3,8 @@ import "./FindRecipies.css";
 import ty from './img/ty.png';
 import chef from './img/chef.png';
 import eat from './img/eat.png';
+import { Link } from "react-router-dom";
+
 
 const FindRecipies = () => {
   return (
@@ -43,7 +45,9 @@ const FindRecipies = () => {
           <p id="i-text-3">Enjoy your delicious meal !</p>
         </div>
       </div>
+      <Link to="/gpt">
       <button>Start Cooking</button>
+      </Link>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Preview = (props) => {
     // const res = await fsubmit(allValues);
 
     let vegbool;
-    if (data.vegetarian[0] == "f" || data.vegetarian[0].toLowerCase() == 'n') {
+    if (data.vegetarian[0].toLowerCase() === "f" || data.vegetarian[0].toLowerCase() === 'n') {
       vegbool = false;
     } else {
       vegbool = true;

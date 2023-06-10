@@ -7,8 +7,7 @@ function Card2(props) {
     <>
         <div className="card-2">
           <div className="card_image">
-            <img src= {props.imageUrl} alt="photo of the recipe" />
-            {console.log( "y  "  + props.imageUrl)}
+            <img src= {props.imageUrl} alt="dish" />
           </div>
 
           <div className="header_container">
