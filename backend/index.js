@@ -16,7 +16,7 @@ app.use(cors())
 
 //  using mongoose@6.10.0 temporarily to fix error - https://stackoverflow.com/a/75638135
 mongoose.connect(
-  "mongodb://localhost:27017/reciperoulette",
+  process.env.MONGO_URL,
   {
     useNewUrlParser: true,
   },
