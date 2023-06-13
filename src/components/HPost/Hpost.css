@@ -1,0 +1,60 @@
+.Hpost {
+  background-color: #568052;
+}
+.Hp-header {
+    padding-top: 100px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.Hp-header p {
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 49px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: white;
+}
+.Hp-header svg {
+  color: white;
+  width: 320px;
+}
+.Hp-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+.Hp-text {
+    border: 3px solid #BADCB7;
+     border-radius: 19px;
+     padding-top: 60px;
+     padding-left: 20px;
+     padding-right: 20px;
+     padding-bottom: 20px;
+}
+.Hp-text p {
+  color: white;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 31px;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+#Hp-btn{
+    background-color: #568052;
+    border: 2px solid #BADCB7;
+    color: #BADCB7;
+    font-weight: 600;
+
+    text-align: center;
+    border-radius: 17px;
+    width: 280px;
+   padding: 9px 0px;
+   /* margin-top:10px;
+   margin-bottom: 150px; */
+   font-family: "Roboto";
+}

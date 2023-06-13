@@ -1,0 +1,203 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "recipe website",
+    "dateExported": "2023-05-09T17:05:00.093Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "32825b3d-3d34-44fc-aaee-1c83ceffc331",
+            "name": "authentication",
+            "containerId": "",
+            "created": "2023-04-01T18:46:32.673Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "743fe3ba-aa57-40e5-b638-0ddc4afdebdf",
+            "name": "Blog",
+            "containerId": "",
+            "created": "2023-04-01T18:46:32.674Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "e3c850af-d71e-4afd-93e2-7cae0618313c",
+            "name": "chat gpt",
+            "containerId": "",
+            "created": "2023-04-02T08:40:02.157Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d7d57c5e-ecd0-49c7-b371-ef324f6b6194",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "32825b3d-3d34-44fc-aaee-1c83ceffc331",
+            "name": "create a new user",
+            "url": "http://localhost:3001/api/auth/createuser",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-01T18:46:32.673Z",
+            "modified": "2023-04-02T18:15:25.330Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"aadhar\",\n  \"email\": \"haha@email.com\",\n  \"password\": \"wow12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6d60e8aa-0e9c-4753-a548-e7256ce871ca",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "32825b3d-3d34-44fc-aaee-1c83ceffc331",
+            "name": "user login",
+            "url": "http://localhost:3001/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-01T18:46:32.674Z",
+            "modified": "2023-04-02T18:16:45.155Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"haha@email.com\",\n  \"password\": \"wow12\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0e2e145d-63e2-451d-aa74-a9f09416037a",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "32825b3d-3d34-44fc-aaee-1c83ceffc331",
+            "name": "get user data",
+            "url": "http://localhost:3001/api/auth/getuser",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-04-01T18:46:32.675Z",
+            "modified": "2023-04-02T08:26:23.063Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyODdiYjliMmFhODcyYTM5YjQxOTAwIn0sImlhdCI6MTY4MDQyMzAzNH0.yo3pUoW5VEUzaKh_q8u01gmx97DxEz2I7ooioxPeq10"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a2c4c471-c2da-4086-9815-8041b090313e",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "743fe3ba-aa57-40e5-b638-0ddc4afdebdf",
+            "name": "get all recipes",
+            "url": "http://localhost:3001/api/blog/getposts",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-04-01T18:46:32.676Z",
+            "modified": "2023-04-02T17:04:39.881Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1cccf5a2-4d07-4a6f-a8de-8aa6ab6dc00a",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "743fe3ba-aa57-40e5-b638-0ddc4afdebdf",
+            "name": "create a post",
+            "url": "http://localhost:3001/api/blog/addpost",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-04-01T18:46:32.677Z",
+            "modified": "2023-04-22T06:28:55.751Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyODdiYjliMmFhODcyYTM5YjQxOTAwIn0sImlhdCI6MTY4MDQyMzAzNH0.yo3pUoW5VEUzaKh_q8u01gmx97DxEz2I7ooioxPeq10"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"title\": \"ice cream\",\n    \"description\": \"test asdads\",\n    \"procedure\": \"idk\",\n    \"tag\": \"asdkjandajksnd\",\n    \"vegetarian\" : false,\n    \"ingredients\" : 2,\n    \"timereq\" : 10\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0bf7b85b-b549-41cd-9dcb-9dd7c21c6956",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "743fe3ba-aa57-40e5-b638-0ddc4afdebdf",
+            "name": "update post",
+            "url": "http://localhost:3001/api/blog/updatepost/64437e31493b37e902d0b75d",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-04-01T18:46:32.678Z",
+            "modified": "2023-04-22T06:28:05.499Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyODdiYjliMmFhODcyYTM5YjQxOTAwIn0sImlhdCI6MTY4MDQyMzAzNH0.yo3pUoW5VEUzaKh_q8u01gmx97DxEz2I7ooioxPeq10"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"new biryani updt\",\n  \"description\" : \"does update post?\",\n  \"time\": 50\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a0c20bef-413d-4837-806f-08a28b93ed0d",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "743fe3ba-aa57-40e5-b638-0ddc4afdebdf",
+            "name": "Delete a post",
+            "url": "http://localhost:3001/api/blog/deletepost/64437e31493b37e902d0b75d",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-04-01T18:46:32.680Z",
+            "modified": "2023-04-22T06:30:12.622Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQyODdiYjliMmFhODcyYTM5YjQxOTAwIn0sImlhdCI6MTY4MDQyMzAzNH0.yo3pUoW5VEUzaKh_q8u01gmx97DxEz2I7ooioxPeq10"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "363c4eaf-09d8-4f11-a42e-6e7470f08654",
+            "colId": "f40c004b-8c9d-4b14-9fbe-12b9e35e5a81",
+            "containerId": "e3c850af-d71e-4afd-93e2-7cae0618313c",
+            "name": "get recipes",
+            "url": "http://localhost:3001/api/gpt/getrecipe",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-04-02T08:40:18.472Z",
+            "modified": "2023-04-26T15:08:31.395Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"message\": \"paneer, chicken, cheese\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

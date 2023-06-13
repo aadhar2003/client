@@ -1,0 +1,103 @@
+.Post-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.Post-text input {
+  display: block;
+}
+.P-Header {
+  text-align: center;
+  margin-top: 60px;
+  
+}
+.P-Header h2 {
+    padding-left: 200px;
+  color: #25652b;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 78px;
+  line-height: 122%;
+  vertical-align: Top;
+  letter-spacing: -2.5%;
+}
+.Post svg{
+    position: relative;
+}
+#small-circle{
+    top: 20px;
+    left: 20px;
+}
+.Post-text p{
+  font-family: "Roboto";
+font-size: 24px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: -0.025em;
+text-align: left;
+color: #25652B;
+
+}
+.Post-text input {
+  width: 540px;
+  border-radius: 18px;
+  margin-bottom: 6px;
+  border: 0px;
+  background-color: #BADCB7;
+  height: 35px;
+  box-sizing: border-box;
+
+}
+.Post-text textarea{
+  width: 540px;
+  /* border-radius: 18px; */
+  margin-bottom: 6px;
+  border: 0px;
+  background-color: #BADCB7;
+  height: 35px;
+  box-sizing: border-box;
+
+}
+#Post-Des{
+  height: 70px;
+}
+#descrip{
+  height: 70px;
+}
+.Post-text textarea::placeholder{
+  color: #25652B;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  /* text-indent: 30px; */
+
+}
+
+.Post-text input::placeholder{
+  color: #25652B;
+
+  
+
+}
+.Post-text input[type=text]{
+  box-sizing: border-box;
+  padding: 4px 15px;
+}
+.Post-text input[type=number]{
+  box-sizing: border-box;
+  padding: 4px 15px;
+}
+.Pt-button{
+  margin-top: 10px;
+  width: 540px;
+  background-color: #ecfff6;
+  border: 3px solid #BADCB7;
+  color:  #25652B;
+
+  font-weight: 600;
+  text-align: center;
+  border-radius: 17px;
+  padding: 9px 0px;
+  font-family: "Roboto";
+}

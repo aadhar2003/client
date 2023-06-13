@@ -1,14 +1,18 @@
-import React from "react";
-import Jumbotron from "../jumbotron/Jumbotron";
-import Choice from "../Choice/Choice";
+import React from 'react'
+import About from '../About/About'
+import Trendingsection from '../Trending/Trendingsection'
+import FindRecipies from '../FindRecipies/FindRecipies'
+import Hpost from '../HPost/Hpost'
 
 function Home() {
   return (
     <>
-      <Jumbotron />
-      <Choice />
+      <About/>
+      <Trendingsection/>
+      <FindRecipies/>
+      <Hpost/>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
