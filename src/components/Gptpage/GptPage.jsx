@@ -158,7 +158,7 @@ function GptPage() {
      <div className={ tempvis === true ? 'temp-section' : undefined }>
         <div className="cont instr-container reverse-temp">
             <div className="instructions">
-            <p>{gptResponse}</p>
+              <div dangerouslySetInnerHTML={{__html: gptResponse}}/>
             </div>
         </div>
         </div>
