@@ -116,10 +116,10 @@ const CardState = (props) => {
     }
   };
 
-  // const correct = async (msg) => {
-  //   const replaced = msg.replace(/\n/g, '{\n}');
-  //   return replaced;
-  // };
+  const correct = async (msg) => {
+    const replaced = msg.replaceAll('\n', '<br>');
+    return replaced;
+  };
 
   const callgpt = async (message) => {
     console.log("working on it");
@@ -135,9 +135,9 @@ const CardState = (props) => {
 
     const json = await response.json();
 
-    // const corrected = await correct(json.message);
+    const corrected = await correct(json.message);
 
-    setGptResponse(json.message);
+    setGptResponse(corrected);
 
     console.log(json.message);
   };
