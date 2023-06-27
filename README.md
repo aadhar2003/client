@@ -40,7 +40,7 @@ UnCooked makes use of the following technologies, programming languages, framewo
   - JWT (JSON Web Tokens)
 
 - **Chat GPT API Integration**:
-  - OpenAI GPT-3: State-of-the-art language model for generating recipe suggestions
+  - OpenAI GPT-3: language model for generating recipe suggestions
 
 ## Installation and Usage
 
