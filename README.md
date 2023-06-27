@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# UnCooked 
+Recipe Sharing Website with Chat GPT API Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation and Usage](#installation-and-usage)
+- [License](#license)
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+UnCooked is a recipe sharing website that aims to connect food enthusiasts and provide a platform to share their favorite recipes. It brings together a community of users who can share their culinary creations, discover new recipes, and explore a variety of dishes. By integrating the Chat GPT API, UnCooked enhances the user experience by providingfficient  personalized recipe suggestions based on the ingredients available with the user. With a focus on estorage and retrieval, the website utilizes MongoDB as the database and implements data models and schemas to ensure smooth data management. The responsive design principles employed using React.js make UnCooked accessible and visually appealing across different devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Recipe Sharing**: Users can share their favorite recipes with the community. They can provide detailed instructions, ingredients, cooking time, and any additional tips or variations.
 
-### `npm test`
+- **Recipe Discovery**: Users can explore a vast collection of recipes shared by other users. They can search for recipes based on keywords, categories, or specific ingredients to find inspiration for their next meal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Chat GPT API Integration**: UnCooked integrates the Chat GPT API to provide personalized recipe suggestions based on the ingredients available with the user. Users can interact with the chatbot, input their available ingredients, and receive relevant recipe recommendations.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+UnCooked makes use of the following technologies, programming languages, frameworks, and libraries:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**:
+  - React.js
+  - HTML5
+  - CSS3
+  - JavaScript
 
-### `npm run eject`
+- **Backend**:
+  - Node.js
+  - Express.js
+  - MongoDB
+  - Mongoose
+  - JWT (JSON Web Tokens)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Chat GPT API Integration**:
+  - OpenAI GPT-3: State-of-the-art language model for generating recipe suggestions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation and Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To install and use UnCooked, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository: `git clone https://github.com/aadhar2003/client.git`
+2. Navigate to the project directory: `cd client`
+3. Install the required dependencies: `npm install`
+4. Configure the environment variables (e.g., MongoDB connection details, Chat GPT API key).
+5. Start the server: `npm run start`
+6. Install backend dependencies `cd backend` then `npm install`
+7. Start the backend server: `nodemon`
+8. Access UnCooked in your web browser at `http://localhost:3000`
 
-## Learn More
+Feel free to explore UnCooked, share your favorite recipes, discover new recipes, and receive personalized recipe suggestions using the integrated Chat GPT API.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+UnCooked is licensed under the MIT License. You are free to use, modify, and distribute this software.
