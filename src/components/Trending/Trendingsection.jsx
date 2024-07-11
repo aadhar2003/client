@@ -8,7 +8,7 @@ function Trendingsection() {
     "https://therecipecritic.com/wp-content/uploads/2020/02/tandoorichicken-500x375.jpg";
 
   const masala_dosa =
-    "https://media-cdn2.greatbritishchefs.com/media/cqfbszpf/pali-hill0064-selects.jpg";
+    "https://selvelglobal.com/cdn/shop/articles/dosa_image.jpg?v=1648469354";
   return (
     <>
       <div className="first-half">

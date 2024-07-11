@@ -38,27 +38,29 @@
     flex-grow: 0;
   }
   
-  .card_image{
-    width: fit-content;
-    height: fit-content;
-  
-    overflow: hidden; /* Hide any overflow */
-  }
-  
-  .card_image > img {
+.card-2 {
     position: relative;
-    
-    /* left: 0px; */
-    /* top: 0px; */
-  
-    width: 100%; /*Set the width of the image to 100% */
-    /* height: 100%;  Set the height of the image to 100% */
-  
-    object-fit: contain; /* Preserve aspect ratio while fitting the image within the container */
-    object-position: center; 
-  
+    width: 250px;
+    background: #ffffff;
     border-radius: 20px;
-  }
+}
+
+.card_image{
+    width: 100%; /* Adjust this if you want a different size */
+    height: 100%; /* Adjust this if you want a different size */
+    overflow: hidden;
+}
+
+.card_image > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from contain to cover */
+    object-position: center;
+    border-radius: 20px;
+}
+
+/* The rest of your CSS remains unchanged */
   
   .subtext_container {
     display: flex;

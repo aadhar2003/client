@@ -5,6 +5,13 @@
     background-color: #ECFFF6;
     
 }
+
+/* Nav.css */
+.activeNavItem {
+    color: #0EAB00; 
+}
+
+
 .right{
     display: flex;
     align-items: center;
